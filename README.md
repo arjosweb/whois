@@ -66,6 +66,37 @@ $.ajax({
 });
 ```
 
+## Payload
+
+See an example of payload API request:
+
+```json
+{
+  "info": {
+    "ip": "127.0.0.1",
+    "country_code": "BR",
+    "country_name": "Brazil",
+    "region_name": "Sao Paulo",
+    "region_code": "SP",
+    "city": "São Paulo",
+    "zip_code": "01000",
+    "time_zone": "America/Sao_Paulo",
+    "latitude": -23.63,
+    "longitude": -46.6322,
+    "provider": "TELEFÔNICA BRASIL S.A",
+    "emoji": "🇧🇷",
+    "currency_symbol": "R$",
+    "currency": "BRL",
+    "phone_code": "55",
+    "capital": "Brasília"
+  },
+  "device": {
+    "os": "Linux",
+    "device": "Desktop",
+    "browser": "Chrome"
+  }
+}
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
