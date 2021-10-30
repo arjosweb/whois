@@ -1,20 +1,25 @@
-# WhoIS API `by ARJOS`
+# WhoIS API - Discover your IP details
+`by ARJOS`
 
 Read below for information on how to use our free API. For more information, visit our official [website](https://whois.arjos.com.br/).
 
-## Installation
+---
+
+
+## ⬇️ Installation
 
 It is not necessary to install any specific plug to use our API. You can make HTTP requests of the GET type with the programming language of your choice.
 
-## Usage
 
-See an example using native JavaScript:
+## 🚀 Usage
+
+### See an example using native JavaScript:
 
 ```javascript
 let info = []
 function getInfos() {
     return new Promise((resolve, reject) => {
-        fetch("https://whois.arjos.com.br/api/info", {
+        fetch("https://whois.arjos.com.br/api/", {
             method: 'GET',
             mode: 'cors',
             headers: {
@@ -22,7 +27,7 @@ function getInfos() {
                 'Origin': '*',
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Headers': '*',
-                'Access-Control-Allow-Methods': 'POST,PUT,PATCH,DELETE',
+                'Access-Control-Allow-Methods': 'GET,POST,PUT,PATCH,DELETE',
                 'Access-Control-Max-Age': '86400'
             }
         }).then(response => {
@@ -39,73 +44,75 @@ function getInfos() {
 getInfos();
 ```
 
-See an example using jQuery:
-
-```javascript
-$.ajax({
-  type: "GET", 
-  headers: {
-    'Content-Type': 'application/json',
-    'Origin': '*',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': '*',
-    'Access-Control-Allow-Methods': 'POST,PUT,PATCH,DELETE',
-    'Access-Control-Max-Age': '86400'
-  },
-  dataType: "json",
-  url: 'https://whois.arjos.com.br/info/',
-  success: function(data) {
-    console.log(
-      'Your ip address is ' + data.ip
-        + ' city: ' + data.city
-        + ' region: ' + data.region_name
-        + ' country: ' + data.country_name
-    );
-    
-  }
-});
-```
-
-## Payload
-
-See an example of payload API request:
+### See an example of payload API request:
 
 ```json
 {
-  "info": {
-    "ip": "127.0.0.1",
-    "country_code": "BR",
-    "country_name": "Brazil",
-    "region_name": "Sao Paulo",
-    "region_code": "SP",
-    "city": "São Paulo",
-    "zip_code": "01000",
-    "time_zone": "America/Sao_Paulo",
-    "latitude": -23.63,
-    "longitude": -46.6322,
-    "provider": "TELEFÔNICA BRASIL S.A",
-    "emoji": "🇧🇷",
-    "currency_symbol": "R$",
-    "currency": "BRL",
-    "phone_code": "55",
-    "capital": "Brasília"
-  },
-  "device": {
-    "os": "Linux",
-    "device": "Desktop",
-    "browser": "Chrome"
-  }
+    "ip": "206.43.69.40",
+        "country": {
+        "country_name": "Brasil",
+        "country_code": "BR",
+        "country_capital": "Brasília",
+        "emoji_flag": "🇧🇷",
+        "currency": "BRL",
+        "currency_symbol": "R$",
+        "call_code": "55"
+    },
+    "location": {
+        "region": "Sao Paulo",
+        "region_code": "SP",
+        "region_capital": "São Paulo",
+        "city": "São Paulo",
+        "zipcode": "01000",
+        "timezone": "America/Sao_Paulo",
+        "latitude": -23.6283,
+        "longitude": -46.6409
+    },
+    "provider": {
+        "isp": "TELEFÔNICA BRASIL S.A",
+        "company": "Vivo",
+        "as": "AS27699 TELEFÔNICA BRASIL S.A"
+    },
+    "device": {
+        "browser": "Chrome",
+        "browser_language": "PT",
+        "os": "Mac OS X",
+        "type": "Desktop"
+    }
 }
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## 🌎 Live
 
-Please make sure to update tests as appropriate.
+* __[Website WhoIS - IP](https://whois.arjos.com.br)__
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+## 🧑🏻‍💻 Authors
 
-## Copyright
+- [@arjosweb](https://www.github.com/arjosweb)
 
-All right reserved for [**ARJOS Devepment**](https://github.com/arjosweb) (Artur Medeiros).
+
+## ⚖️ License
+
+MIT License
+
+Copyright (c) 2021 @ARJOSWEB - ARJOS.COM.BR
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+  
